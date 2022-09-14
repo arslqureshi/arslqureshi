@@ -27,10 +27,10 @@ function Title({ layers, ...props }) {
     <group {...props} ref={group}>
       <Text
         ref={textRef}
-        name="text-panna"
+        name="text-arsl"
         depthTest={false}
         material-toneMapped={false}
-        material-color="#FFFFFF"
+        material-color="#000000"
         {...TEXT_PROPS}
       >
         ARSL
@@ -107,7 +107,12 @@ function TitleCopies({ layers }) {
   return (
     <group name="titleCopies">
       {vertices.map((vertex, i) => (
-        <Title name={"titleCopy-" + i} position={vertex} layers={layers} />
+        <Title
+          key={i}
+          name={"titleCopy-" + i}
+          position={vertex}
+          layers={layers}
+        />
       ))}
     </group>
   );
